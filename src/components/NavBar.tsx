@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-no-text.png";
 import menu from "../assets/menu.png"
 import "../styles/navbar.css";
 import LoginModal from "./LoginModal";
@@ -15,7 +15,7 @@ export default function NavBar() {
         <>
             <nav className="nav-bar">
 
-                <img src={logo} width={60} />
+                <img src={logo} width={70} />
 
                 <div className="nav-items">
                     <h3><a href="#home">Home</a></h3>
@@ -26,7 +26,7 @@ export default function NavBar() {
                     <h3><a className="login-nav" onClick={() => setShowLoginModal(true)}>Login</a></h3>
                 </div>
 
-                <img id="menu-icon" src={menu} width={60} onClick={() => setShowNavModal(true)} />
+                <img id="menu-icon" src={menu} width={70} onClick={() => setShowNavModal(true)} />
 
 
             </nav>
