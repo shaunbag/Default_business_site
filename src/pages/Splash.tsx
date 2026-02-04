@@ -2,12 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import "../styles/splash.css";
 import logo from "../assets/logo.png";
 import emailjs from '@emailjs/browser';
+import { useNavigate } from "react-router-dom";
 
 export default function Splash() {
 
     const [email, setEmail] = useState("");
     const [quote, setQuote] = useState("");
     const formRef = useRef<HTMLFormElement | null>(null);
+    const history = useNavigate();
 
     useEffect(() => {
         callQuoteApi();
@@ -56,12 +58,12 @@ export default function Splash() {
                 <div>
                     <h3>Mailing List</h3>
                     <form ref={formRef} onSubmit={(e) => sendEmail(e)}>
-                        <input className="mail-input" placeholder="Email" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input required className="mail-input" placeholder="Email" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <button className="mail-btn" type="submit">SUBMIT</button>
                     </form>
                 </div>
                 <br/>
-                <button>Enter Site</button>
+                <button className="button-85" onClick={() => history("/home")}>Enter Site</button>
             </section>
 
         </article>
