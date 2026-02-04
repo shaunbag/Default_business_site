@@ -1,0 +1,69 @@
+.modal-background {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.modal-container {
+  width: min(520px, 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.05));
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  text-align: center;
+}
+
+.modal-container form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-self: center;
+  gap: 10;
+}
+
+.modal-container h2 {
+  margin: 0;
+}
+
+.login-header{
+    margin: 0;
+}
+
+.modal-close{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    width: 20px;
+    margin: 0;
+
+}
+
+@media (max-width: 480px) {
+  .modal-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset:unset;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal-container {
+    text-align: center;
+    display: flex;
+    justify-self: flex-start;
+    width: 50%;
+  }
+}
