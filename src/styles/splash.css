@@ -1,0 +1,63 @@
+.splash-container{
+    background-image: url(/assets/img/pexels-architecture-1868667_1280.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: 'flex';
+    align-content: center;
+}
+
+.splash-section{
+    background-color: rgba(255, 255, 255, 0.842);
+    color: black;
+    padding: 20px;
+    width: 50%;
+    justify-self: center;
+    border-radius: 20px;
+    box-shadow: rgb(2, 5, 54) 10px 10px 10px;
+    border: 2px solid grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mail-input{
+    height: 30px;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+}
+
+.mail-input:focus{
+    border: none;
+    outline: none;
+}
+
+.mail-btn{
+    height: 30px;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+}
+
+@media (max-width: 480px) {
+
+.splash-section{
+    width: 80%;
+}
+
+.splash-section img {
+    width: 150px;            
+    max-width: 80%;         
+  }
+
+  .splash-section h2 {
+    font-size: 1.5rem;     
+  }
+
+  .splash-section p {
+    font-size: 1rem;        
+  }
+}
