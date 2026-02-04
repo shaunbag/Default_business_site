@@ -51,8 +51,8 @@ export default function Splash() {
         <article className="splash-container">
             <section className="splash-section">
                 <img src={logo} width={200}/>
-                <h2>Powering <span style={{color: 'red'}}>Tech</span> Through <span style={{color: 'green'}}>Experience</span></h2>
-                <p>"{quote}"</p>
+                <h2 className="splash-sub-header">Powering <span style={{color: 'red'}}>Tech</span> Through <span style={{color: 'green'}}>Experience</span></h2>
+                <i>"{quote}"</i>
                 <div>
                     <h3>Mailing List</h3>
                     <form ref={formRef} onSubmit={(e) => sendEmail(e)}>
