@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(253, 255, 255, 0.452);
+    background-color: rgba(2, 54, 105, 0.452);
     width: 100%;
 }
 
@@ -24,11 +24,11 @@
 }
 
 .login-nav{
-    color: blueviolet !important;
+    color: rgb(106, 53, 156) !important;
 }
 
 .login-nav:hover{
-    color: rgb(120, 6, 226) !important;
+    color: rgb(167, 117, 214) !important;
 }
 
 #menu-icon{
