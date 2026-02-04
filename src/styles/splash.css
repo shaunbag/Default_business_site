@@ -116,8 +116,15 @@
 }
 @media (max-width: 480px) {
 
+  .splash-container{
+    display: flex;
+    justify-content: center;
+  }
+
 .splash-section{
-    width: 80%;
+    width:80%;
+    height: 80%;
+    align-self: center;
 }
 
 .splash-section img {
