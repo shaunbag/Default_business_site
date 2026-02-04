@@ -52,15 +52,24 @@
     justify-content: center;
 }
 
-@media (max-width: 480px) {
-
-.home-title-container img {
-    max-width: 150px;
-}
-.home-title h1{
-    font-size: 3.8rem;
-}
-.home-title-container{
-    width: 80%;
-}
+@media (max-width: 780px) {
+    .home-top{
+        text-align: left;
+    }
+    .home-title-container img {
+        max-width: 150px;
+    }
+    .home-title h1{
+        font-size: 3.8rem;
+    }
+    .home-title h2 {
+        font-size: 1rem;
+    }
+    .home-title{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
