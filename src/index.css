@@ -15,12 +15,8 @@
 }
 
 a {
-  font-weight: 500;
-  color: #000000;
   text-decoration: inherit;
-}
-a:hover {
-  color: #313131;
+  color: wheat;
 }
 
 body {
@@ -48,9 +44,9 @@ h1 {
     background-color: #f9f9f9;
   }
 }
-@media (max-width: 480px) {
-#root{
-  overflow: hidden;
-}
+@media (max-width: 780px) {
+  :root{
+    overflow-x: hidden;
+  }
 
 }

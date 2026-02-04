@@ -12,10 +12,10 @@ export default function Home(){
             <NavBar />
             <section className="home-top" id="home">
                 <div className="home-title-container">
-                    <img src={logo} width={300}/>
                     <div className="home-title">
-                    <h1>Acme</h1>
-                    <h2>A World Of Possibility</h2>
+                    <img src={logo} width={300}/>
+                        <h1>Acme</h1>
+                        <h2>A World Of Possibility</h2>
                     </div>
                 </div>
             </section>
