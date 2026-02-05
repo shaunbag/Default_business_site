@@ -4,6 +4,7 @@ import logo from "../assets/logo-no-text.png";
 import Mission from "./Mission";
 import About from "./About";
 import Contact from "./Contact";
+import Footer from "../components/Footer";
 
 export default function Home(){
 
@@ -22,6 +23,7 @@ export default function Home(){
             <Mission />
             <About />
             <Contact />
+            <Footer />
         </main>
     )
 }

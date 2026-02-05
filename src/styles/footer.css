@@ -1,0 +1,120 @@
+.footer-twotier {
+    color: black;
+}
+
+.footer-twotier__top {
+    background-color: white;
+    padding: 3rem 1.5rem;
+}
+
+.footer-twotier__top-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    color: black;
+}
+
+.footer-twotier__brand p {
+    margin: 1rem 0 0 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-twotier__brand .logo {
+    width: 150px;
+    fill: var(--footer-top-heading);
+}
+
+.footer-twotier__heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--footer-top-heading);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-twotier__links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-twotier__links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-twotier__links a {
+    color: var(--footer-top-text);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-twotier__links a:hover {
+    color: var(--footer-top-link-hover);
+    text-decoration: underline;
+}
+
+.footer-twotier__bottom {
+    background-color: var(--footer-bottom-bg);
+    color: var(--footer-bottom-text);
+    padding: 1.5rem;
+}
+
+.footer-twotier__bottom-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.footer-twotier__bottom a {
+    color: var(--footer-bottom-text);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-twotier__bottom a:hover {
+    color: var(--footer-bottom-link-hover);
+    text-decoration: underline;
+}
+
+.footer-twotier__copyright {
+    margin: 0;
+}
+
+.footer-twotier__social ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-twotier__social a:hover {
+    text-decoration: none;
+}
+
+.footer-twotier__social svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+@media (min-width: 768px) {
+    .footer-twotier__top-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .footer-twotier__bottom-container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
