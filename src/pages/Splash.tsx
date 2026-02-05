@@ -63,7 +63,7 @@ export default function Splash() {
                     </form>
                 </div>
                 <br/>
-                <button className="button-85" onClick={() => history("/home")}>Enter Site</button>
+                <button className="enter-btn" onClick={() => history("/home")}>Enter Site</button>
             </section>
 
         </article>
