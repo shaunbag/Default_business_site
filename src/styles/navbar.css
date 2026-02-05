@@ -1,0 +1,50 @@
+.nav-bar{
+    position: fixed;
+    top: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(2, 54, 105, 0.452);
+    width: 100%;
+}
+
+.nav-bar img {
+    padding: 10px;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-items a {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.login-nav{
+    color: rgb(106, 53, 156) !important;
+}
+
+.login-nav:hover{
+    color: rgb(167, 117, 214) !important;
+}
+
+#menu-icon{
+    display: none;
+}
+
+@media (max-width: 780px) {
+    .nav-items{
+        display: none;
+    }
+    .nav-bar{
+        width: 100vw;
+        overflow: hidden;
+    }
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}

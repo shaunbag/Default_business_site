@@ -42,14 +42,32 @@
     border: none;
 }
 
+.enter-btn{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.enter-btn:hover{
+  background-color: rgb(153, 153, 153);
+}
+
 .splash-sub-header{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(184, 183, 183);
 }
+
 @media (max-width: 480px) {
 
+  .splash-container{
+    display: flex;
+    justify-content: center;
+  }
+
 .splash-section{
-    width: 80%;
+    width:80%;
+    height: 80%;
+    align-self: center;
 }
 
 .splash-section img {
@@ -58,7 +76,8 @@
   }
 
   .splash-section h2 {
-    font-size: 1.5rem;     
+    font-size: 1.5rem;  
+    text-align: center;   
   }
 
   .splash-section p {
