@@ -1,0 +1,29 @@
+.home-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background: #0d6782;
+    background: linear-gradient(178deg, rgb(5, 47, 59) 25%, rgba(86, 53, 97, 1) 78%);
+}
+
+
+.contact-container {
+  border-radius: 5px;
+  background-color: #3f3f3f;
+  border-radius: 15px;
+  box-shadow: #000000 10px 10px 10px;
+  padding: 20px;
+  width: 50%;
+  justify-self: center;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-self: center;
+  overflow: hidden;
+  height: 100%;
+}
