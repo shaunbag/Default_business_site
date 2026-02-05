@@ -1,11 +1,11 @@
 .nav-bar{
     position: fixed;
+    z-index: 10;
     top: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(2, 54, 105, 0.452);
     width: 100%;
 }
 
