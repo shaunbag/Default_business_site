@@ -5,15 +5,18 @@ import "../styles/navbar.css";
 import LoginModal from "./LoginModal";
 import MenuModal from "./MenuModal";
 
-export default function NavBar() {
+type Props = {
+    isHome: boolean;
+}
 
+export default function NavBar({isHome}: Props) {
 
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showNavModal, setShowNavModal] = useState(false);
 
     return (
         <>
-            <nav className="nav-bar">
+            <nav className="nav-bar" style={{backgroundColor: isHome ? "rgba(2, 54, 105, 0.452)" : "transparent" }}>
 
                 <img src={logo} width={70} />
 
