@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/splash.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-black.png";
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 
