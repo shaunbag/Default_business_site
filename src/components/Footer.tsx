@@ -1,5 +1,5 @@
 import "../styles/footer.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-black.png";
 import github from "../assets/github.png";
 import x from "../assets/x.png";
 import linkedin from "../assets/linkedin.png";

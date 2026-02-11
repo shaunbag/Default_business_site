@@ -1,6 +1,6 @@
 .home-top {
   position: relative;
-  height: 110vh;
+  height: 115vh;
   width: 100%;
   background-image: url(/public/assets/img/city.jpg);
   background-size: cover;
@@ -32,12 +32,12 @@
 
 
 
-.home-top h1, h2 {
+.home-top h1, h3 {
     text-align: left;
 }
 
 .home-top h1 {
-    font-size: 150px;
+    font-size: 5.5rem;
 }
 
 .home-title-container{
@@ -52,6 +52,24 @@
 }
 
 .home-title h1, h2{
+    margin: 0;
+}
+
+.home-subtitle {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.home-subtitle button {
+    background-color: #c23e3e;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.home-subtitle h3{
     margin: 0;
 }
 
