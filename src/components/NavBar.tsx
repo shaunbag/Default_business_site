@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/logo-white.png";
 import menu from "../assets/menu.png"
 import "../styles/navbar.css";
@@ -7,15 +7,26 @@ import MenuModal from "./MenuModal";
 import { useNavigate } from "react-router-dom";
 
 type Props = {
-    isHome?: boolean;
     shopNav: boolean;
 }
 
-export default function NavBar({isHome, shopNav}: Props) {
+export default function NavBar({ shopNav}: Props) {
 
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showNavModal, setShowNavModal] = useState(false);
+    const [isHome, setIsHome] = useState(true);
     const history = useNavigate();
+
+    useEffect(() => {
+        const changeNavBg = () => {
+            const isAtTop = window.scrollY < 10;
+            setIsHome(prev => (prev !== isAtTop ? isAtTop : prev));
+        };
+
+        window.addEventListener("scroll", changeNavBg);
+
+        return () => window.removeEventListener("scroll", changeNavBg);
+    }, []);
 
     return (
         <>
@@ -26,7 +37,8 @@ export default function NavBar({isHome, shopNav}: Props) {
                     shopNav ? 
                     <div className="nav-items">
                     <h3><a onClick={() => history("/home")}>Home</a></h3>
-                    <h3><a>Cart</a></h3>
+                    <h3><a onClick={() => history('/shop')}>Shop</a></h3>
+                    <h3><a onClick={() => history("/cart")}>Cart</a></h3>
                     <h3><a className="login-nav" onClick={() => setShowLoginModal(true)}>Login</a></h3>
                 </div>
                 :
