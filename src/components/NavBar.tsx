@@ -5,6 +5,7 @@ import "../styles/navbar.css";
 import LoginModal from "./LoginModal";
 import MenuModal from "./MenuModal";
 import { useNavigate } from "react-router-dom";
+import { useShopStore } from "../store";
 
 type Props = {
     shopNav: boolean;
@@ -12,6 +13,7 @@ type Props = {
 
 export default function NavBar({ shopNav}: Props) {
 
+    const { cart } = useShopStore();
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showNavModal, setShowNavModal] = useState(false);
     const [isHome, setIsHome] = useState(true);
@@ -38,7 +40,7 @@ export default function NavBar({ shopNav}: Props) {
                     <div className="nav-items">
                     <h3><a onClick={() => history("/home")}>Home</a></h3>
                     <h3><a onClick={() => history('/shop')}>Shop</a></h3>
-                    <h3><a onClick={() => history("/cart")}>Cart</a></h3>
+                    <h3><div className="cart-count">{cart.length}</div><a onClick={() => history("/cart")}>Cart</a></h3>
                     <h3><a className="login-nav" onClick={() => setShowLoginModal(true)}>Login</a></h3>
                 </div>
                 :
