@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/Footer"
 import NavBar from "../components/NavBar"
 import { useShopStore } from "../store";
@@ -8,6 +8,8 @@ import "../styles/shop.css";
 export default function Shop(){
 
     const { items, addItems } = useShopStore();
+    const [query, setQuery] = useState("");
+
 
     useEffect(() => {
         const fetchItems = async () => {
@@ -24,15 +26,21 @@ export default function Shop(){
             }
         }
         fetchItems();
-    },[])
+    },[addItems])
 
 
     return(
         <main>
             <NavBar shopNav={true} />
+            <div className="items-search">
+                Search:
+                <input type="text" value={query} onChange={(e) => {
+                setQuery(e.target.value)}}/>
+            </div>
+           
             <section className="items-container">
             {
-                items.map(item => {
+                items.filter(i => i.title.includes(query)).map(item => {
                     return <ItemView key={item.id} item={item} />
                 })
             }
