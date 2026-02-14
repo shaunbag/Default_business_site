@@ -5,6 +5,7 @@
     padding: 5%;
     background: #0d6782;
     background: linear-gradient(178deg, rgb(5, 47, 59) 25%, rgba(86, 53, 97, 1) 78%);
+    
 }
 
 .item-view{
@@ -28,6 +29,12 @@
     justify-content: center;
     background: #0d6782;
     background: linear-gradient(178deg, rgb(5, 47, 59) 25%, rgba(86, 53, 97, 1) 78%);
+}
+
+.items-search{
+    padding-top: 6%;
+    margin: 0;
+    background-color: rgb(5, 47, 59);
 }
 
 .item-details{
