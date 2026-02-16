@@ -13,9 +13,9 @@ export default function ItemPage() {
     return (
         <section className="item-page-container">
             <NavBar shopNav={true} />
-            <h2>{item?.title}</h2>
-            <img src={item?.image} width={200} />
             <div className="item-details">
+                <h2>{item?.title}</h2>
+                <img src={item?.image} width={200} />
                 <p>{item?.description}</p>
                 <p>${item?.price}</p>
 
