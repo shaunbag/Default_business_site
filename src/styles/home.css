@@ -1,6 +1,6 @@
 .home-top {
   position: relative;
-  height: 115vh;
+  height: 100vh;
   width: 100%;
   background-image: url(/public/assets/img/city.jpg);
   background-size: cover;
@@ -9,17 +9,17 @@
   z-index: 1;  
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:flex-start;
 }
 
-
+/* 
 .home-top::after {
   content: "";
   position: absolute;
   bottom: -1px; 
   left: 0;
   width: 100%;
-  height: 140px;
+  height: 9%;
 
   background-image: url(/assets/svg/wave.svg);
   background-repeat: no-repeat;
@@ -28,12 +28,12 @@
 
   pointer-events: none;
   z-index: 2;
-}
+} */
 
 
 
 .home-top h1, h3 {
-    text-align: left;
+    text-align: center;
 }
 
 .home-top h1 {
@@ -41,10 +41,11 @@
 }
 
 .home-title-container{
-    width: 50%;
+    width: 100vw;
     align-self: flex-start;
-    align-items: center;
-    margin-left: 10%;
+    animation: fadeIn 2s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    margin-top: 10%;
 }
 
 .home-title-container img {
@@ -57,32 +58,91 @@
 
 .home-subtitle {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
 }
 
 .home-subtitle button {
     background-color: #c23e3e;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 1rem;
     cursor: pointer;
+    width: 150px;
+    padding: 10px;
+    align-self: center;
+}
+
+.home-subtitle button:hover {
+    background-color: #a52a2a;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
 }
 
 .home-subtitle h3{
     margin: 0;
 }
 
+.home-flash-cards {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    align-items: center;
+    padding:20px 0;
+}
+
+.flash-card {
+    background: linear-gradient(178deg, rgb(5, 47, 59, 0.9) 25%, rgba(86, 53, 97, 1) 78%);
+    color: white;
+    border-radius: 50px;
+    box-shadow: black 10px 10px 10px;
+    border: rgb(18, 1, 32) 2px solid;
+    padding: 50px;
+    text-align: center;
+}
+.flash-card:hover {
+    background-color: rgba(2, 54, 105, 1);
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+.flash-card-a {
+    animation: fadeInLeft 1s ease-in-out;
+}
+.flash-card-b {
+    animation: fadeInUp 1s ease-in-out;
+}
+.flash-card-c {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.trust-pilot{
+    color: white;
+    padding: 50px;
+    text-align: center;
+    margin: 1px 0;
+}
+
+.trust-pilot-content {
+    background: linear-gradient(178deg, rgb(5, 47, 59, 0.9) 25%, rgba(86, 53, 97, 1) 78%);
+    border-radius: 15px;
+    box-shadow: black 10px 10px 10px;
+    border: rgb(2, 2, 85) 2px solid;
+    padding: 30px;
+    display: inline-block;
+    animation: fadeInUp 1s ease-in-out;
+}
 
 @media (max-width: 780px) {
     .home-top{
         text-align: left;
+        height: auto;
     }
     .home-title-container img {
         max-width: 150px;
+        height: auto;
     }
     .home-title h1{
-        font-size: 3.8rem;
+        font-size: 3rem;
     }
     .home-title h2 {
         font-size: 1rem;
@@ -93,5 +153,30 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 15%;
     }
+    .home-flash-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
 }

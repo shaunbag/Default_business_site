@@ -12,20 +12,41 @@ export default function Home() {
 
     return (
         <main>
-            <NavBar shopNav={false}/>
-            <section className="home-top" id="home">
-                <div className="home-title-container">
-                    <div className="home-title">
+            <NavBar shopNav={false} />
+            <main className="home-top" id="home">
+                <article className="home-title-container">
+                    <section className="home-title">
                         <h1>Power Your Creations With Acme</h1>
                         <div className="home-subtitle">
                             <h3>Building the future, one project at a time.</h3>
                             <button onClick={() => history('/shop')}>Shop</button>
                         </div>
-
+                    </section>
+                </article>
+                <section className="home-flash-cards">
+                    <div className="flash-card flash-card-a">
+                        <h2>100+</h2>
+                        <p>Valued Customers</p>
                     </div>
-                </div>
+                    <div className="flash-card flash-card-b">
+                        <h2>50+</h2>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div className="flash-card flash-card-c">
+                        <h2>100%</h2>
+                        <p>Customer Satisfaction</p>
+                    </div>
+                </section>
+                <section className="trust-pilot">
+                    <div className="trust-pilot-content">
+                        <h2>Rated 5 Stars on Trustpilot</h2>
+                        <p>See why our customers love us!</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <button onClick={() => window.open("https://www.trustpilot.com/review/acme.com", "_blank")}>Read Reviews</button>
+                    </div>
+                </section>
+            </main>
 
-            </section>
 
             <Mission />
             <About />
