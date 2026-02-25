@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import type { Item } from "../store"
+import type { Item } from "../utils/types";
 
 type Props = {
     item: Item; 
