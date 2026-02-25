@@ -4,7 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     margin: 0;
     display: flex;
@@ -36,12 +36,12 @@
     display: flex;
     justify-content: center;
     align-items: last baseline;
-    height: 40vh;
+    height: 100%;
     width: 100%;
 }
 
 .about-card{
-    width: 80%;
+    width: 75%;
     justify-self: center;
     align-self: center;
     margin-bottom: 40px;
@@ -51,6 +51,8 @@
     box-shadow: black 10px 10px 10px;
     border: rgb(2, 2, 85) 2px solid;
     padding: 20px;
+    margin: 120px;
+    font-size: 1.8rem;
 }
 
 
