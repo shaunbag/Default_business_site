@@ -1,12 +1,5 @@
 import { create } from "zustand";
-
-export type Item = {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    image: string;
-}
+import type { Item, Order } from "./utils/types";
 
 type ShopStore = {
     items: Item[];
@@ -14,6 +7,8 @@ type ShopStore = {
     cart: Item[];
     addToCart: (item: Item) => void;
     removeFromCart: (itemId: number) => void;
+    order: Order | null;
+    placeOrder: (order: Order) => void;
 }
 
 export const useShopStore = create<ShopStore>((set) => ({
@@ -22,4 +17,6 @@ export const useShopStore = create<ShopStore>((set) => ({
     cart: [],
     addToCart: (item) => set((state) => ({ cart: [...state.cart, item] })),
     removeFromCart: (itemId) => set((state) => ({ cart: state.cart.filter(item => item.id !== itemId) })),
+    order: null,
+    placeOrder: (order) => set({ order })
 }));

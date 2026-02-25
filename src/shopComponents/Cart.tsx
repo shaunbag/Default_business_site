@@ -1,16 +1,22 @@
+import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { useShopStore } from "../store";
 
-export default function Cart() {
+type Props = {
+    className: string;
+}
 
-    const { cart, removeFromCart } = useShopStore();    
+export default function Cart({ className }: Props) {
 
-    function handleRemoveFromCart(id: number){
+    const { cart, removeFromCart } = useShopStore();
+    const history = useNavigate();
+
+    function handleRemoveFromCart(id: number) {
         removeFromCart(id);
     }
 
-    return(
-        <section className="cart-container">
+    return (
+        <section className={className}>
             <NavBar shopNav={true} />
             <h2>My Cart</h2>
             <table>
@@ -32,10 +38,16 @@ export default function Cart() {
                                 </tr>
                             )
                         }
-                    )
+                        )
                     }
                     <tr><td colSpan={3}>Total: ${cart.reduce((sum, item) => sum + item.price, 0)}</td></tr>
                 </tbody>
+                {
+                    className === "cart-container" && (
+                        <button onClick={() => history("/checkout")}>Proceed to Checkout</button>
+                    )
+                }
+
             </table>
         </section>
     )
