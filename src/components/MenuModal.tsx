@@ -1,5 +1,6 @@
 import type React from "react"
 import "../styles/modal.css"
+import { useNavigate } from "react-router-dom";
 
 type Props = {
     setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -8,15 +9,20 @@ type Props = {
 
 export default function MenuModal({ setShowModal, setShowLoginModal }: Props) {
 
+    const history = useNavigate();
+    
     return (
         <div className="modal-background">
             <div className="modal-container">
             <button className="modal-close" onClick={() => setShowModal(false)}>X</button>
-                <h3><a href="#home">Home</a></h3>
-                <h3><a href="#mission">Mission</a></h3>
-                <h3><a href="#about">About</a></h3>
-                <h3><a href="#contact">Contact</a></h3>
-                <h3><a >Shop</a></h3>
+                <h3><a onClick={() => {
+                    history("/home")
+                    setShowModal(false)
+                }}>Home</a></h3>
+                <h3><a onClick={() => {
+                    history("/shop")
+                    setShowModal(false)
+                }}>Shop</a></h3>
                 <h3><a className="login-nav" onClick={() => {
                     setShowLoginModal(true)
                     setShowModal(false)
