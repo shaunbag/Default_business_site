@@ -1,8 +1,8 @@
 import NavBar from "../components/NavBar";
 import "../styles/home.css";
-import Mission from "./Mission";
-import About from "./About";
-import Contact from "./Contact";
+import Mission from "../components/Mission";
+import About from "../components/About";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
