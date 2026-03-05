@@ -7,6 +7,7 @@ import ItemPage from './shopComponents/ItemPage'
 import Cart from './shopComponents/Cart'
 import { useEffect } from 'react'
 import { useShopStore } from './store'
+import Checkout from './shopComponents/Checkout'
 
 function App() {
 
@@ -36,7 +37,8 @@ function App() {
         <Route path='home' element={<Home />}/>
         <Route path='shop' element={<Shop />}/>
         <Route path='item/:id' element={<ItemPage />}/>
-        <Route path='cart' element={<Cart />} />
+        <Route path='cart' element={<Cart className="cart-container"/>} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </>
   )
